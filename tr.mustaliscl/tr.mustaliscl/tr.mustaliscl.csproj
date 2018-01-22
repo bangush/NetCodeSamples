@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5F2A5C10-F972-4600-858F-D967E1DB7C5F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>tr.mustaliscl</RootNamespace>
+    <AssemblyName>tr.mustaliscl</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisIgnoreGeneratedCode>false</CodeAnalysisIgnoreGeneratedCode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Interop.ADOX">
+      <HintPath>..\External\Interop.ADOX.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Oracle.DataAccess">
+      <HintPath>..\External\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="access\AccessBaglanti.cs" />
+    <Compile Include="ado\AdoxMine.cs" />
+    <Compile Include="configurasyon\ApplicationSettings.cs" />
+    <Compile Include="configurasyon\Configurasyon.cs" />
+    <Compile Include="dataclient\Constraint.cs" />
+    <Compile Include="dataclient\Default.cs" />
+    <Compile Include="dataclient\ForeignKey.cs" />
+    <Compile Include="dataclient\Param.cs" />
+    <Compile Include="dataclient\PrimaryKey.cs" />
+    <Compile Include="data\Data.cs" />
+    <Compile Include="data\DataClient.cs" />
+    <Compile Include="data\DbManager.cs" />
+    <Compile Include="data\IManager.cs" />
+    <Compile Include="data\Manager.cs" />
+    <Compile Include="data\MDBC.cs" />
+    <Compile Include="data\OledbManager.cs" />
+    <Compile Include="data\SqlDataClient.cs" />
+    <Compile Include="data\SqlManager.cs" />
+    <Compile Include="derle\CalisanKlasor.cs" />
+    <Compile Include="disk\Surucu.cs" />
+    <Compile Include="dosyalar\Dosya.cs" />
+    <Compile Include="ekran\Ekran.cs" />
+    <Compile Include="frames\Frame.cs" />
+    <Compile Include="guven\Guvenlik.cs" />
+    <Compile Include="json\JSONBuilder.cs" />
+    <Compile Include="kayitdefteri\KayitDefteri.cs" />
+    <Compile Include="liste\Listem.cs" />
+    <Compile Include="liste\Vector.cs" />
+    <Compile Include="math\MatCevrim.cs" />
+    <Compile Include="math\Matematik.cs" />
+    <Compile Include="metinsel\Metin.cs" />
+    <Compile Include="net\InternetCS.cs" />
+    <Compile Include="others\Class1.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sistem\Sistem.cs" />
+    <Compile Include="xml\XML.cs" />
+    <Compile Include="xml\XMLHelper.cs" />
+    <Compile Include="xml\XmlManager.cs" />
+    <Compile Include="zaman\Saat.cs" />
+    <Compile Include="zaman\Tarih.cs" />
+    <Compile Include="zaman\Zaman.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="oledb\" />
+    <Folder Include="renkler\" />
+    <Folder Include="sql\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
